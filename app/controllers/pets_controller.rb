@@ -31,7 +31,7 @@ class PetsController < ApplicationController
   end
 
   patch '/pets/:id' do
-    binding.pry
+    # binding.pry
     @pet = Pet.find(params[:id])
     @pet.update(params[:pet])
     redirect to "pets/#{@pet.id}"
